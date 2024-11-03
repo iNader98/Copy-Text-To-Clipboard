@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Text To Clipboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="text-boxes">
+        <div class="text-box HTMLBox">
+            <div class="topic">HTML Code:</div>
+            <textarea id="HTMLBox">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure et quia aut velit voluptas dolor illum ipsa distinctio ut dolore vel molestias rerum veritatis maxime hic molestiae, quaerat fugit porro aliquid commodi laborum id ratione doloribus. Consectetur numquam sit impedit maiores laborum illo nemo ex, illum ullam suscipit, repellat sequi maxime expedita eligendi aperiam soluta quam sed, corrupti dolorem? Est ullam eaque eligendi, id possimus quibusdam aperiam repellat dolorem voluptas earum necessitatibus corrupti, nesciunt autem, consectetur excepturi accusantium nam quos doloremque illo explicabo exercitationem. Accusantium animi ad eaque mollitia! Culpa illo doloremque possimus. Est quae rem assumenda error. Totam aut mollitia dignissimos corrupti autem qui dicta? Sit ex explicabo dolor aliquam molestias asperiores dignissimos dolorem ipsum pariatur numquam ullam deleniti est sed, quis ratione error vel quisquam beatae saepe, sapiente necessitatibus? Vel, voluptate minus, rem aut debitis reiciendis, enim quia obcaecati laboriosam incidunt assumenda repellat magnam totam sequi corrupti quis. Impedit sed quibusdam perspiciatis quis totam culpa temporibus delectus vitae sapiente, quae obcaecati at aliquid ab, fugiat cum iusto laboriosam autem atque, pariatur tempora! Consequatur omnis a iusto error soluta qui tenetur, neque maiores quam sunt dicta obcaecati magnam officiis quidem cum dignissimos, cumque necessitatibus autem. Minima sit vitae deserunt.
+            </textarea>
+            <button id="HTMLButton">Copy Codes</button>
+        </div>
+        <div class="text-box CSSBox">
+            <div class="topic">CSS Code:</div>
+            <textarea id="CSSBox" readonly>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: 'Poppins', sans-serif;
+                }
+                body {
+                    min-height: 100vh;
+                    width: 100%;
+                    background: #fdfcfc;
+                }
+                .text-boxes {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 30px;
+                    margin-bottom: 60px;
+                }
+                .text-boxes .text-box {
+                    height: 380px;
+                    max-width: 660px;
+                    width: 100%;
+                    margin: 55px 0;
+                }
+                .text-boxes .text-box .topic {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #265df2;
+                    margin: 4px;
+                }
+                .text-boxes .text-box textarea {
+                    height: 100%;
+                    width: 100%;
+                    padding: 30px;
+                    font-size: 15px;
+                    font-weight: 400;
+                    outline: none;
+                    border: 1px solid #265df2;
+                    border-radius: 8px;
+                    background: #e7edfe;
+                }
+                .text-box textarea::-webkit-scrollbar {
+                    display: none;
+                }
+                .text-boxes .text-box button {
+                    height: 45px;
+                    width: 155px;
+                    color: #fff;
+                    background: #265df2;
+                    outline: none;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 17px;
+                    font-weight: 400;
+                    cursor: pointer;
+                    margin: 8px 0;
+                    transition: all 0.4s ease;
+                }
+                .text-boxes .text-box button:hover {
+                    background: #0e4bf1;
+                }
+                
+                @media (max-width: 400px) {
+                    .text-boxes .text-box button {
+                        width: 100%;
+                    }
+                }            </textarea>
+            <button id="CSSButton">Copy Codes</button>
+        </div>
+        <div class="text-box JSBox">
+            <div class="topic">JS Code:</div>
+            <textarea id="JSBox" readonly>
+                //HTMLBox js code
+
+                let HTMLBox = document.getElementById("HTMLBox");
+                let HTMLButton = document.getElementById("HTMLButton");
+                
+                HTMLButton.onclick = function() {
+                    HTMLBox.select ();
+                    document.execCommand("copy");
+                    HTMLButton.innerText = "Codes Copied"
+                }
+                
+                // CSSBox js code
+                
+                let CSSBox = document.getElementById("CSSBox");
+                let CSSButton = document.getElementById("CSSButton");
+                
+                CSSButton.onclick = function() {
+                    CSSBox.select ();
+                    document.execCommand("copy");
+                    CSSButton.innerText = "Codes Copied"
+                }
+                
+                // JSBox js code
+                
+                let JSBox = document.getElementById("JSBox");
+                let JSButton = document.getElementById("JSButton");
+                
+                JSButton.onclick = function() {
+                    JSBox.select ();
+                    document.execCommand("copy");
+                    JSButton.innerText = "Codes Copied"
+                }
+                            </textarea>
+            <button id="JSButton">Copy Codes</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
